@@ -8,8 +8,8 @@
 set -e
 set -u
 
-readonly VERSION="6.3"
-readonly RELNO="${VERSION/./}"
+readonly VERSION="${VERSION:-6.3}"
+readonly RELNO="${RELNO:-${VERSION/./}}"
 
 readonly ARCH="${ARCH:-amd64}"
 readonly MIRROR="${MIRROR:-ftp.usa.openbsd.org}"
